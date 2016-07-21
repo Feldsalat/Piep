@@ -44,14 +44,7 @@ void setup() {
     
     // Pieptest:
     pinMode(Piep, OUTPUT); 
-    digitalWrite(Piep, HIGH); // mach Piep
-    delay (300);
-    digitalWrite(Piep, LOW); // aus Piep
-    delay (500);
-    digitalWrite(Piep, HIGH); // mach Piep
-    delay (300);
-    digitalWrite(Piep, LOW); // aus Piep
-    
+   
     // Akkutest:
     // Akku ganz zu Beginn mal testen, was das für einer ist
     // Grenzwerte: Typ 2 <8.45 , Typ 3 >8.45 , Typ 4 >12.65
@@ -66,6 +59,49 @@ void setup() {
         Typ = 2;
       }
     }
+ 
+    if (Akkuspannung > 12.65){
+      digitalWrite(Piep, HIGH); // mach Piep
+      delay (200);
+      digitalWrite(Piep, LOW); // aus Piep
+      delay (400);
+      digitalWrite(Piep, HIGH); // mach Piep
+      delay (200);
+      digitalWrite(Piep, LOW); // aus Piep
+      delay (400);
+      digitalWrite(Piep, HIGH); // mach Piep
+      delay (200);
+      digitalWrite(Piep, LOW); // aus Piep
+      delay (400);
+      digitalWrite(Piep, HIGH); // mach Piep
+      delay (200);
+      digitalWrite(Piep, LOW); // aus Piep
+    } else{
+    
+    if (Akkuspannung > 8.45){
+      digitalWrite(Piep, HIGH); // mach Piep
+      delay (200);
+      digitalWrite(Piep, LOW); // aus Piep
+      delay (400);
+      digitalWrite(Piep, HIGH); // mach Piep
+      delay (200);
+      digitalWrite(Piep, LOW); // aus Piep
+      delay (400);
+      digitalWrite(Piep, HIGH); // mach Piep
+      delay (200);
+      digitalWrite(Piep, LOW); // aus Piep
+    }
+     else{
+        digitalWrite(Piep, HIGH); // mach Piep
+        delay (200);
+        digitalWrite(Piep, LOW); // aus Piep
+        delay (400);
+        digitalWrite(Piep, HIGH); // mach Piep
+        delay (200);
+        digitalWrite(Piep, LOW); // aus Piep
+      }
+    }
+   delay (4000);
   }
   
 void loop() {
@@ -112,5 +148,4 @@ void loop() {
   if (index >= AnzahlMessungen) { index = 0; }
   
 }
-
 
