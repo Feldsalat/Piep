@@ -42,7 +42,7 @@ void setup() {
     for (int thisReading = 0; thisReading < AnzahlMessungen ; thisReading++)
     Messungen[thisReading] = 0; 
     
-    // Pieptest:
+    
     pinMode(Piep, OUTPUT); 
    
     // Akkutest:
@@ -59,7 +59,7 @@ void setup() {
         Typ = 2;
       }
     }
- 
+ // Piep mal Zellenzahl:
     if (Akkuspannung > 12.65){
       digitalWrite(Piep, HIGH); // mach Piep
       delay (200);
