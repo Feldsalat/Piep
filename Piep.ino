@@ -25,7 +25,7 @@ float Zellenspannung;
 int Typ;                             // Akku-Typ, Teiler für argwenig und ganzargwenig
 unsigned long currentMillis;
 
-const int AnzahlMessungen = 50;      // wie oft 
+const int AnzahlMessungen = 30;      // wie oft 
 
 int Messungen[AnzahlMessungen];      // Messungen
 int index = 0;                       // Index
@@ -37,7 +37,7 @@ int mittel = 0;                      // Mittelwert
 void setup() {
   
     
-    //Serial.begin(9600);
+    Serial.begin(9600);
     
     for (int thisReading = 0; thisReading < AnzahlMessungen ; thisReading++)
     Messungen[thisReading] = 0; 
@@ -58,12 +58,12 @@ void setup() {
     sensorValue = analogRead(Akku); 
     Akkuspannung = sensorValue * (5 / 1023.0) * Skalierung;
     if( Akkuspannung > 12.65) { 
-      Typ = 4.0; 
+      Typ = 4; 
     } else { 
       if( Akkuspannung > 8.45) {
-        Typ = 3.0;
+        Typ = 3;
       } else {
-        Typ = 2.0;
+        Typ = 2;
       }
     }
   }
@@ -98,7 +98,7 @@ void loop() {
 
 }
   // Einstellmonitor:
-  /*
+  
   if (index >= AnzahlMessungen)
   {
       Serial.print("Akku = " );   
@@ -106,7 +106,7 @@ void loop() {
       Serial.print("   Zelle = " );  
       Serial.println(Zellenspannung);
       delay(5);
-  } */
+  } 
   
   
   if (index >= AnzahlMessungen) { index = 0; }
