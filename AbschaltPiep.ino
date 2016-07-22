@@ -3,7 +3,7 @@
   Spannungsüberwachung mit automatischer Zellenzahlerkennung für 2-4s LiPo.
   Zwei Warnschwellen: "argwenig" und "ganzargwenig"
   Zugehörige Pausenzeiten: "interval1" und "interval2"
-  
+  Zuschalten der Last über "minimum", abschalten unter "zuwenig".
   Dirk Bauer 2016
   */
 
