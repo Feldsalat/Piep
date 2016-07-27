@@ -8,3 +8,5 @@ Zugehörige Pausenzeiten: "interval1" und "interval2"
 Variante mit Abschaltung:	
 Zuschalten der Last über "minimum", abschalten unter "zuwenig".	
 Mit der Abschaltung wird auch der Warnpiep abgeschaltet, das Programm läuft weiter, es wird weiterhin Strom verbraucht! 
+Ich verwende einen Pro Mini mit ausgetauschtem Spannungsregler, das Original verträgt die hohe Spannung nicht!
+Original Spannungregler runter und ein LP2950 5V eingelötet... Stromverbrauch insgesamt ca. 18mA.
